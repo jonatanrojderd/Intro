@@ -21,7 +21,14 @@ namespace Git
 
             foreach (Vehicle vehicle in vehicles)
             {
-                Console.WriteLine(vehicle.GetVehicleType());
+                if (vehicle.GetVehicleType() == VehicleType.Car)
+                {
+                    Console.WriteLine(vehicle.GetVehicleType());
+                }
+                else if (vehicle.GetVehicleType() == VehicleType.Truck)
+                {
+                    // etc.
+                }
             }
         }
     }
