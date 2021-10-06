@@ -1,4 +1,6 @@
-﻿namespace Git
+﻿using System;
+
+namespace Git
 {
     class Program
     {
@@ -21,49 +23,48 @@
             
             // Using the created class as an example.
             Vehicle vehicle;
+            vehicle = new Car();
 
+            // if (vehicle.GetVehicleType() == VehicleType.None)
+            // {
+            //     // Do nothing
+            // }
+            // else if (vehicle.GetVehicleType() == VehicleType.Car)
+            // {
+            //     // Process car information
+            // }
+            // else if (vehicle.GetVehicleType() == VehicleType.Motorcycle)
+            // {
+            //     // Process motorcycle information
+            // }
+            // else if (vehicle.GetVehicleType() == VehicleType.Truck)
+            // {
+            //     // Process truck information
+            // }
+
+            // You can use a switch statement instead of if-else
             
-            // Hello branch
-        }
-    }
-    
-    /* Classes is used everywhere in a .NET application,
-     * they can be seen as a container of Data and Logic.
-     * Classes is a Reference Type, which means that the variable created is NULL
-     * until you explicitly create an object and assign it.
-     * i.e. Vehicle myVehicle = new Vehicle(); (or assign an already created object).
-     */
-    public class Vehicle
-    {
-        // This is a private field, this can only be accessed in the Vehicle class.
-        private VehicleType _type;
-        
-        /* This is a Constructor.
-         * It gets called when an object is created.
-         */
-        public Vehicle(VehicleType type)
-        {
-            _type = type;
-        }
+            vehicleType = vehicle.GetVehicleType(); 
+            switch (vehicleType)
+            {
+                // if (vehicleType == VehicleType.Car) {}
+                case VehicleType.Car:
+                {
+                    Console.WriteLine($"This vehicle is a: {vehicleType}");
+                    break;
+                }
+                // else if (vehicleType == VehicleType.Motorcycle) {}
+                case VehicleType.Motorcycle:
+                    break;
+                case VehicleType.Truck:
+                    break;
+                case VehicleType.None:
+                    break;
+            }
 
-        /* A Method (also called function) contains logic that gets processed when called.
-         * It could be used to process some data that gets passed into it through parameters,
-         * or return data. 
-         */
-        public VehicleType GetVehicleType()
-        {
-            return _type;
+            Vehicle[] vehicles = new Vehicle[4];
+            vehicles[0] = vehicle;
+            vehicles[1] = new Car();
         }
-    }
-
-    /* Enums is a Value Type that contains Constants.
-     * This enum stores different types of Vehicles, the standard enum is like an int.
-     */
-    public enum VehicleType
-    {
-        None = 0,
-        Car = 1,
-        Motorcycle = 2,
-        Truck = 3
     }
 }
