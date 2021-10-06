@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessTheNumber", "GuessTheN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git", "Git\Git.csproj", "{528FA5CF-E768-474A-B760-44B197008716}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventure", "TextAdventure\TextAdventure.csproj", "{1D0546DB-7413-4C10-91C1-AD34F552F076}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{528FA5CF-E768-474A-B760-44B197008716}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{528FA5CF-E768-474A-B760-44B197008716}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{528FA5CF-E768-474A-B760-44B197008716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D0546DB-7413-4C10-91C1-AD34F552F076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D0546DB-7413-4C10-91C1-AD34F552F076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D0546DB-7413-4C10-91C1-AD34F552F076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D0546DB-7413-4C10-91C1-AD34F552F076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
