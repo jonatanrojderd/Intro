@@ -29,10 +29,6 @@ namespace TextAdventure
                 Description = "This room smells funny."
             };
 
-            // Dictionary<string, Room> connectedRooms = new Dictionary<string, Room>();
-            // connectedRooms.Add("Left", room2);
-            // room.ConnectedRooms = connectedRooms;
-
             room.ConnectRooms(Direction.Left, room2);
             
             _rooms.Add(room);
@@ -50,40 +46,11 @@ namespace TextAdventure
             {
                 while (true)
                 {
-                    Console.WriteLine("We should play a game now");
+                    
                 }
             }
 
             Console.WriteLine("Ok then.");
         }
-    }
-
-    public class Room
-    {
-        public string Description;
-        public Dictionary<Direction, Room> ConnectedRooms;
-
-        public void ConnectRooms(Direction direction, Room room)
-        {
-            ConnectedRooms?.Add(direction, room);
-            room.ConnectedRooms?.Add(Direction.Backward, this);
-            
-            /* Is the same as the above.
-             
-            if (ConnectedRooms != null)
-            {
-                ConnectedRooms.Add(direction, room);
-            }
-            */
-        }
-    }
-
-    public enum Direction
-    {
-        None,
-        Forward,
-        Backward,
-        Left,
-        Right
     }
 }
