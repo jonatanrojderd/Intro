@@ -53,6 +53,7 @@ namespace TextAdventure
                               "[Y]es or [N]o" +
                               $"{Environment.NewLine}");
 
+            // BUG: There's a bug here, what happens if the user doesn't press Y or N?
             ConsoleKeyInfo userInput = Console.ReadKey(true);
             if (userInput.KeyChar == 'n')
             {
